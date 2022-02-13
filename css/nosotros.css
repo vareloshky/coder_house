@@ -1,0 +1,338 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/*GRID*/
+#grid-container{
+    background-color: rgb(180, 179, 179);    
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    grid-template-rows: auto;
+    gap: 5px;
+    grid-template-areas:  "header header header header"
+                "slider slider section section"
+                "slider slider section section"
+                "footer footer footer footer";
+}
+
+/*Header*/
+#main-header{
+    grid-area: header;       
+    background-color: rgb(0, 0, 0); 
+    position: sticky; /*Mantengo el Header visible al bajar*/
+/* top:1px;   
+    z-index: auto;   */  
+    padding: 5px;
+}
+
+.main-navbar{    
+    display: flex;   
+    justify-content: space-between; /*Espacio entre los contenderos de manera Horizontal*/  
+    align-items: flex-end; /*los items se colocan al final del contenedor*/ 
+    
+}
+
+
+.navlogo{     
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;           
+    margin: 1px;
+    padding: 5px;        
+}
+
+/*IMG -> En este caso es hijo de Div*/
+.logoempresa{     
+    width: 240px;
+    height: 100px;    
+}
+
+.navslogan{    
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+    color: whitesmoke;
+    text-align: center; 
+    padding-bottom: 25px;
+    width: 30%;   
+}
+
+.navbarlist{       
+    display: flex;
+    justify-content: space-around;     
+    width: 50%; 
+    list-style-type: none;       
+}
+
+/*Al pasar el mouse que se pinte*/
+.navbarlist li a:hover{
+    background-color: orange;       
+}
+
+.navbarlist a{    
+    text-decoration: none;
+    text-align: center; /*Centro el texto*/    
+    font-size: 20px;
+    color: white;
+    padding: 2px;
+    display: block; /*Ocupa todo el Ancho de la barra NAV para evitar que se superponga el sombreado del item*/
+    border-radius: 5px;
+    transition: 1.5s;  
+}
+
+/*Boton Menu mobile*/
+.menubtn{
+    font-size: 30px;/*Le doy tamaño al icono menu*/
+    background-color: white;
+    cursor: pointer;/*Coloco un dedo al posicionarme sobre el boton*/
+    display: none;/*Oculto el menu boton*/
+}
+
+#check{
+    display: none;
+}
+
+/*pagina-Nosotros*/
+
+#slider{    
+    grid-area: slider;    
+    display: flex;
+    flex-flow: row nowrap; /*Evitamos que los items puedan saltar de linea*/
+    align-items: stretch; /*Le damos el relleno de la altura de la caja padre*/
+}
+
+.slider-nosotros{      
+    width: 100%;
+   /* height: 400px; */
+    overflow: hidden; /*Oculto los elementos por fuera del Section*/    
+    
+}
+
+.slider-nosotros ul{    
+    padding: 0;  
+    display: flex;   
+    width: 400%;/*Al ser 2 imagenes, le otorgo el 100% a cada una*/   
+    animation: slider 16s infinite alternate ease-in-out;   
+}
+
+.slider-nosotros li{
+    width: 100%;    
+    list-style: none;
+}
+
+.slider-nosotros img{
+    width: 100%;
+    /*height: 400px;*/
+}
+
+/*Animacion del Slider*/
+@keyframes slider {
+    /*La 1er imagen iria del 0 al 20% respecto al tiempo ingresado, serian 20*0.2 = 4seg transicion*/
+    0% {margin-left: 0;}
+    20% {margin-left: 0;}
+
+    /*Dejo un 5% del tiempo al cambiar la imagen, es decir, 1 seg de transicion*/
+    25% {margin-left: -100%;}
+    45% {margin-left: -100%;}
+
+    50% {margin-left: -200%;}
+    70% {margin-left: -200%;}
+
+    75% {margin-left: -300%;}
+    100% {margin-left: -300%;}
+}
+
+.nuestra-casa{
+    grid-area: section;    
+    background-color:rgb(255, 214, 147); 
+    padding: 10px;   
+}
+
+/*Footer*/
+#main-footer{    
+    grid-area: footer;        
+    background-color: rgb(24, 23, 23);
+    color: rgb(255, 255, 255);    
+}
+
+.contenedor-footer{     
+    padding: 5px;    
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    grid-template-rows: 160px 25px;
+    grid-template-areas: "contacto ubicacion redes"
+                        "autor autor autor";    
+    justify-items: center;
+}
+
+.contenedor-footer h4{
+    padding-bottom: 2px;
+    border-bottom: 2px solid white; /*Subrayado*/
+}
+
+.contact-foo{     
+    grid-area: contacto;
+   /* grid-column: 1 / span 1; */     
+    padding: 5px;
+    width: 250px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;   
+    text-align: center;    
+}
+
+.map-foo{      
+    grid-area: ubicacion; 
+    /*grid-column: 2 / span 1; */     
+    padding: 5px; 
+    width: 250px;
+    height: 150px;
+    text-align: center; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-around;   
+    text-align: center;  
+}
+
+.map iframe{
+    margin: 2px;
+    height: 30mm;
+    width: 50mm;
+}
+
+.redes-foo{    
+    grid-area: redes;  
+    /*grid-column: 3 / span 1; */       
+    padding: 5px; 
+    width: 150px;
+    height: 150px;   
+    display: flex; 
+    flex-direction: column;    
+    text-align: center;                  
+}
+
+.objects{    
+    height: 150px; 
+    display:flex;   
+    flex-direction: column;    
+    justify-content: space-evenly;
+    align-items: center;   
+}
+
+.derechos-foo{   
+    grid-area: autor; 
+    /*grid-column: 1 / span 3; */   
+    padding: 2px;
+    width: 100%;
+    background-color: rgb(63, 63, 63);
+    text-align: right;
+}
+
+/*Hago aparecer el Boton Menu a los 440px*/
+@media screen and (max-width:440px) {
+
+    #grid-container{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas:  "header"
+        "slider"
+        "section"
+        "footer";
+    }
+
+    .navlogo{
+        width: 350px;
+        justify-content: space-between;
+    }
+
+    .logoempresa{
+        width: 180px;
+        height: 100px; 
+    }
+    .navslogan{        
+        width: 150px;
+    }
+
+    .navbarlist{    
+        display: block;
+        justify-content: space-around;  
+        position: absolute;        
+        width: 50%;
+        height: 100vh;
+        background: rgb(5, 5, 24);
+        top: 115px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s; 
+    }
+    
+
+    .navbarlist li{
+        display: block;        
+        line-height: 30px;        
+    }
+
+    .menubtn{        
+        display: block;/*Muestro el Menu Boton*/
+    }
+
+    
+    
+    .navbarlist li a:hover, a.active{
+        color: red;
+    }
+
+    #check:checked ~ .navbarlist{
+        left: 0%;
+    }
+
+    #slider{
+        grid-area: slider;  
+    }
+
+    .foto-slider{         
+        height: 200px;  
+    }     
+
+    .foto-slider img{        
+        height: 200px;    
+    }
+
+    .contenedor-footer{     
+        padding: 5px;    
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(3 , 160px)  25px;
+        grid-template-areas: "contacto"
+                                "ubicacion"
+                                "redes"
+                                "autor";                            
+        justify-items: center;     
+    }
+
+}
+
+@media screen  and (max-width: 767px) {
+    .navbarlist{       
+        position: absolute; 
+        width: 100%;
+        height: 100vh;
+        background: rgb(5, 5, 24);
+        top: 115px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;  
+    }
+
+    .navbarlist li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    #check:checked ~ .navbarlist{
+        left: 0%;
+    }
+}
