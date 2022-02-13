@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/contacto.css"> <!--Link a CSS-->
+    <title>Contacto</title>
+    <script src="https://kit.fontawesome.com/b1bfd96cb6.js" crossorigin="anonymous"></script>
+</head>
+
+<body id="grid-container">
+    <header id="main-header">       
+        <nav class="main-navbar">                            
+            <div class="navlogo">
+                <img class="logoempresa" src="../images/logo-marca-offw.png" alt="logoMendez">
+                <h3 class="navslogan">¡ Más de 30 Años Acompañandote !</h3> 
+            </div>  
+            <input type="checkbox" id="check">        
+                <label for="check" class="menubtn">
+                    <i class="fas fa-bars"></i>
+                </label>     
+                <ul class="navbarlist">                        
+                    <li><a href="../index.html" title="Inicio">Inicio</a></li>
+                    <li><a href="nosotros.html" title="Nosotros">Nosotros</a></li> <!--Enlace Relativo con Vinculo Ancla #-->
+                    <li><a href="catalogo.html" title="Catalogo">Catalogo</a></li>                                    
+                    <li><a href="contacto.html" title="Contacto">Contacto</a></li>                           
+                </ul>                        
+        </nav>     
+    </header>        
+
+    <section class="main-form">
+        <div class="contacto-form">
+            <h2>Contacto</h2>
+        </div>
+        
+        <form action ="gracias.html" class="Form" method="POST">
+            <label for="nombre">Nombre</label>
+            <input class="controls" type="text" name="nombre" value="Nombre" required=""> 
+            
+            <label for="apellido">Apellido</label>
+            <input class="controls" type="text" name="apellido" value="Apellido"> 
+            
+            <label for="asunto"> Asunto</label>
+            <input class="controls" type="text" name="asunto" value="Ingresar Asunto" required=""> 
+            
+            <label for="Email">Email</label>
+            <input class="controls" type="email" name="Email" value="ejemplo@gmail.com" required="">
+            
+            <label for="tu_mensaje">Tu Mensaje</label> 
+            <textarea class="mensaje" name="tuMensaje"></textarea>
+            
+            <input class="reset" type="reset" name="Borrar texto">                                  
+            
+            <label for="newsletter">Queres recibir el Newsletter?</label>
+            <input class="newletter" type="checkbox" name="newsletter" value="si"> <!--Control de Seleccion-->
+            
+            <div class="consulta">
+                <p>Seleccionar  Tipo  de  Consulta</p>
+                <label for="consulta"></label>
+                <select name="tipo_de_consulta"> <!--Menu desplegable-->
+                    <option>Productos</option>
+                    <option>Usos</option>
+                    <option>Ventas</option>
+                </select>    
+            </div>                   
+            
+            <input class="enviar" type="submit" name="botom" value="ENVIAR">    
+    
+        </form>
+    <hr>
+        
+    </section>
+
+    <footer id="main-footer">
+        <div class="contenedor-footer">
+
+            <div class="contact-foo">
+                <h4>Contactenos</h4>                
+                <p>Av. Senador Morón 987, Bella Vista</p>
+                <p>Tel: 4666-0095</p>
+                <p>electricidadmendez@gmail.com</p>
+            </div>
+
+            <div class="map-foo">                
+                <h4>Ubicacion</h4>                                
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d488.4250774846084!2d-58.679531278838255!3d-34.56066505383586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe1a7cae86d570d9b!2sElectricidad%20Mendez!5e0!3m2!1ses-419!2sar!4v1636487546529!5m2!1ses-419!2sar"  allowfullscreen="" loading="lazy" ></iframe>
+                </div>                
+            </div>
+
+            <div class="redes-foo">                
+                <h4>Redes Sociales</h4>                              
+                <div class="objects">
+                    <img src="../images/instagram-color.png" alt="logo-instagram" width="50px" height="50px">                                
+                    <img src="../images/facebook-color.png" alt="logo-facebook" width="50px" height="50px">
+                </div>  
+            </div>    
+            <h5 class="derechos-foo"> &copy; Vareloshky Design | Lucas Varela</h5>                 
+        </div>       
+    </footer>
+    
+</body>
+</html>
