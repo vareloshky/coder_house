@@ -5,61 +5,40 @@
 
 /*GRID*/
 #grid-container{
-    background-color: rgb(34, 34, 34);    
-    display: grid;
-    grid-template-columns: repeat(3 , 1fr);
-    grid-template-rows: auto; /*120px 400px 350px 200px;*/
-    gap: 5px;
-    grid-template-areas:  "header header header header"
-                "section section section section"                
-                "footer footer footer footer";
+    background-color: rgb(34, 34, 34);
 }
+
 
 /*Header*/
-#main-header{
-    grid-area: header;       
+#main-header{       
     background-color: rgb(0, 0, 0); 
     position: sticky; /*Mantengo el Header visible al bajar*/
-    /*top:1px;   
-    z-index: auto; */     
+/*    top: 1px;   
+    z-index: 1;     
     padding: 5px;
-}
-
-.main-navbar{    
-    display: flex;   
-    justify-content: space-between; /*Espacio entre los contenderos de manera Horizontal*/  
-    align-items: flex-end; /*los items se colocan al final del contenedor*/ 
-    
-}
-
-
-.navlogo{     
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;           
-    margin: 1px;
-    padding: 5px;        
+    width: auto;*/
 }
 
 /*IMG -> En este caso es hijo de Div*/
 .logoempresa{     
     width: 240px;
-    height: 100px;    
+    height: 100px;       
 }
 
-.navslogan{    
+.navslogan{     
     font-style: italic;
     font-family: 'Times New Roman', Times, serif;
-    color: whitesmoke;
-    text-align: center; 
+    color: whitesmoke; 
+    padding-top: 25px;   
     padding-bottom: 25px;
-    width: 30%;   
+    width: auto;  
+    text-align: center; 
 }
 
 .navbarlist{       
     display: flex;
-    justify-content: space-around;     
-    width: 50%; 
+    justify-content: space-around;       
+    width: 90%; 
     list-style-type: none;       
 }
 
@@ -91,13 +70,12 @@
 }
 
 /*Pagina Contacto*/
-.main-form{
-    grid-area: section;
+.main-form{    
     display: flex;
     flex-direction: column;
-    width: 400px;
+    width: auto;
     margin: auto;
-    background-color: #404f5d;
+    background-color: #3f95f7;
     padding: 5px;   
     color: white;    
 }
@@ -135,32 +113,44 @@
 }
 
 /*Footer*/
-#main-footer{    
-    grid-area: footer; 
+#main-footer{
+    margin: 5px;   
+    padding: 5px;
+    width: auto;
+    height: auto;
     background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);    
+    color: rgb(255, 255, 255); 
+    /*border: 2px solid red;*/
+    display: flex;   
+    
 }
 
-.contenedor-footer{     
-    padding: 5px;    
-    display: grid;
-    grid-template-columns: repeat(3 , 1fr);
-    grid-template-rows: 160px 25px;
-    grid-template-areas: "contacto ubicacion redes"
-                        "autor autor autor";    
+/*
+.row>.col, .row>[class^="col-"]{
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    background-color: rgb(161, 228, 255);
+    border: 1px solid red;
+}
+*/
+.contenedor-footer{      
+    padding: 5px;
+    width: 100%;
+    height: auto;    
+    display: flex;    
+    flex-flow: row wrap;  
+    justify-content: space-around; 
     justify-items: center;
 }
 
-.contenedor-footer h4{
+.contenedor-footer h4{    
     padding-bottom: 2px;
     border-bottom: 2px solid white; /*Subrayado*/
 }
 
-.contact-foo{     
-    grid-area: contacto;
-   /* grid-column: 1 / span 1; */     
+.contact-foo{    
     padding: 5px;
-    width: 250px;
+    width: 260px;
     height: 150px;
     display: flex;
     flex-direction: column;
@@ -169,16 +159,13 @@
 }
 
 .map-foo{      
-    grid-area: ubicacion; 
-    /*grid-column: 2 / span 1; */     
     padding: 5px; 
     width: 250px;
     height: 150px;
-    text-align: center; 
+    text-align: center;
     display: flex;
     flex-direction: column; 
-    justify-content: space-around;   
-    text-align: center;  
+    justify-content: space-around;       
 }
 
 .map iframe{
@@ -187,137 +174,26 @@
     width: 50mm;
 }
 
-.redes-foo{    
-    grid-area: redes;  
-    /*grid-column: 3 / span 1; */       
-    padding: 5px; 
+.redes-foo{ 
     width: 150px;
-    height: 150px;   
+    height: 150px;
+    text-align: center;
     display: flex; 
-    flex-direction: column;    
-    text-align: center;                  
+    flex-flow: column nowrap; 
+    justify-content: space-around;  
+    
 }
 
-.objects{         
-    height: 150px; 
+.objects{               
+    width: 100%;    
     display:flex;   
-    flex-direction: column; 
+    flex-flow: row wrap;
     justify-content: space-evenly;
     align-items: center;   
 }
 
-.derechos-foo{   
-    grid-area: autor; 
-    /*grid-column: 1 / span 3; */   
-    padding: 2px;
-    width: 100%;
-    background-color: rgb(63, 63, 63);
-    text-align: right;
-}
-
-/*Hago aparecer el Boton Menu a los 440px*/
-@media screen and (max-width:440px) {
-
-    #grid-container{
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: auto;
-        grid-template-areas:  "header"
-        "section"       
-        "footer";
-    }
-
-    .navlogo{
-        width: 350px;
-        justify-content: space-between;
-    }
-
-    .logoempresa{
-        width: 180px;
-        height: 100px; 
-    }
-    .navslogan{        
-        width: 150px;
-    }
-
-    .navbarlist{    
-        display: block;
-        justify-content: space-around;  
-        position: absolute;        
-        width: 50%;
-        height: 100vh;
-        background: rgb(5, 5, 24);
-        top: 115px;
-        left: -100%;
-        text-align: center;
-        transition: all .5s; 
-    }
-    
-
-    .navbarlist li{
-        display: block;        
-        line-height: 30px;        
-    }
-
-    .menubtn{        
-        display: block;/*Muestro el Menu Boton*/
-    }
-
-    
-    
-    .navbarlist li a:hover, a.active{
-        color: red;
-    }
-
-    #check:checked ~ .navbarlist{
-        left: 0%;
-    }
-
-    #slider{
-        grid-area: slider;  
-    }
-
-    .foto-slider{         
-        height: 200px;  
-    }     
-
-    .foto-slider img{        
-        height: 200px;    
-    }
-
-    .contenedor-footer{     
-        padding: 5px;    
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: repeat(3 , 160px)  25px;
-        grid-template-areas: "contacto"
-                                "ubicacion"
-                                "redes"
-                                "autor";                            
-        justify-items: center;     
-    }
-
-}
-
-@media screen  and (max-width: 767px) {
-    .navbarlist{       
-        position: absolute; 
-        width: 100%;
-        height: 100vh;
-        background: rgb(5, 5, 24);
-        top: 115px;
-        left: -100%;
-        text-align: center;
-        transition: all .5s;  
-    }
-
-    .navbarlist li{
-        display: block;
-        margin: 50px 0;
-        line-height: 30px;
-    }
-
-    #check:checked ~ .navbarlist{
-        left: 0%;
-    }
+.derechos-foo{     
+    padding: 2px;   
+    text-align: center;
+    margin-top: 20px;
 }

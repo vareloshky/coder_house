@@ -132,8 +132,7 @@ height: 200px;
 
 .row>.col, .row>[class^="col-"]{
     padding-top: .75rem;
-    padding-bottom: .75rem;
-    background-color: rgba(167, 230, 255, 0.185);
+    padding-bottom: .75rem;     
     border: 1px solid red;
 }
 
