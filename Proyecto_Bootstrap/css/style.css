@@ -4,24 +4,13 @@
 }
 
 /*GRID*/
-
 #grid-container{
-    background-color: rgb(34, 34, 34);    
-    /*display: grid;
-    grid-template-columns: repeat(4 , 1fr);
-    grid-template-rows: 120px 400px 450px 200px;
-    gap: 5px;
-    /*grid-template-areas:  "header header header header"
-                "slider slider slider slider"
-                "box box box box"
-                "footer footer footer footer";*/
+    background-color: rgb(34, 34, 34);
 }
 
 
-
 /*Header*/
-#main-header{
-    /*grid-area: header;    */   
+#main-header{       
     background-color: rgb(0, 0, 0); 
     position: sticky; /*Mantengo el Header visible al bajar*/
     top: 1px;   
@@ -30,37 +19,26 @@
     width: auto;
 }
 
-
-/*
-.navlogo{         
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-end;        
-    margin: 1px;
-    padding: 5px;     
-    width: auto;   
-}
-*/
-
 /*IMG -> En este caso es hijo de Div*/
 .logoempresa{     
     width: 240px;
-    height: 100px;    
+    height: 100px;       
 }
 
-.navslogan{    
+.navslogan{     
     font-style: italic;
     font-family: 'Times New Roman', Times, serif;
-    color: whitesmoke;
-    text-align: center; 
+    color: whitesmoke; 
+    padding-top: 25px;   
     padding-bottom: 25px;
-    width: auto;   
+    width: auto;  
+    text-align: center; 
 }
 
 .navbarlist{       
     display: flex;
-    justify-content: space-around;     
-    width: 50%; 
+    justify-content: space-around;       
+    width: 90%; 
     list-style-type: none;       
 }
 
@@ -92,11 +70,9 @@
 }
 
 /*SLIDER*/
-
 #slider{
-    /*grid-area: slider;*/
-    display: flex; 
-    justify-content: center;     
+    /*display: flex; 
+    justify-content: center;  */    
 }
 
 .foto-slider{    
@@ -145,10 +121,7 @@
 }
 
 /* Box */
-#main-box{    
-/* border: 2px solid white;*/
-    /*grid-area: box;*/
-    /*border: solid 2px red;*/
+#main-box{ 
     width: auto;
     height: auto;
     padding: 10px;
@@ -172,8 +145,7 @@
 }
 
 /*Footer*/
-#main-footer{        
-    /*grid-area: footer; */    
+#main-footer{
     margin: 5px;   
     padding: 5px;
     width: auto;
@@ -200,10 +172,6 @@
     display: flex;    
     flex-flow: row wrap;  
     justify-content: space-around; 
-    /*grid-template-columns: repeat(3 , 1fr);
-    grid-template-rows: 160px 25px;
-    grid-template-areas: "contacto ubicacion redes"
-                        "autor autor autor";   */ 
     justify-items: center;
 }
 
@@ -212,9 +180,7 @@
     border-bottom: 2px solid white; /*Subrayado*/
 }
 
-.contact-foo{     
-    /*grid-area: contacto;*/
-   /* grid-column: 1 / span 1; */     
+.contact-foo{    
     padding: 5px;
     width: 260px;
     height: 150px;
@@ -225,8 +191,6 @@
 }
 
 .map-foo{      
-    /*grid-area: ubicacion;*/ 
-    /*grid-column: 2 / span 1; */        
     padding: 5px; 
     width: 250px;
     height: 150px;
@@ -242,9 +206,7 @@
     width: 50mm;
 }
 
-.redes-foo{          
-    /*grid-area: redes;  */
-    /*grid-column: 3 / span 1; */    
+.redes-foo{ 
     width: 150px;
     height: 150px;
     text-align: center;
@@ -262,9 +224,7 @@
     align-items: center;   
 }
 
-.derechos-foo{   
-    /*grid-area: autor; */
-    /*grid-column: 1 / span 3; */   
+.derechos-foo{     
     padding: 2px;   
     text-align: center;
     margin-top: 20px;
