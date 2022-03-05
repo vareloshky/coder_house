@@ -1,0 +1,351 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/*GRID*/
+#grid-container {
+  background-color: #222222;
+}
+
+/*Header*/
+#main-header {
+  background-color: black;
+  position: -webkit-sticky;
+  position: sticky;
+  /*Mantengo el Header visible al bajar*/
+  top: 1px;
+  z-index: 1;
+  padding: 5px;
+  width: auto;
+}
+
+/*IMG -> En este caso es hijo de Div*/
+.logoempresa {
+  width: 240px;
+  height: 100px;
+}
+
+.navslogan {
+  font-style: italic;
+  font-family: 'Times New Roman', Times, serif;
+  color: whitesmoke;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  width: auto;
+  text-align: center;
+}
+
+.navbarlist {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 90%;
+  list-style-type: none;
+}
+
+/*Al pasar el mouse que se pinte*/
+.navbarlist li a:hover {
+  background-color: orange;
+}
+
+.navbarlist a {
+  text-decoration: none;
+  text-align: center;
+  /*Centro el texto*/
+  font-size: 20px;
+  color: white;
+  padding: 2px;
+  display: block;
+  /*Ocupa todo el Ancho de la barra NAV para evitar que se superponga el sombreado del item*/
+  border-radius: 5px;
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+}
+
+.menubtn {
+  font-size: 30px;
+  /*Le doy tamaño al icono menu*/
+  background-color: white;
+  cursor: pointer;
+  /*Coloco un dedo al posicionarme sobre el boton*/
+  display: none;
+  /*Oculto el menu boton*/
+}
+
+#check {
+  display: none;
+}
+
+/*SLIDER*/
+#slider {
+  /*display: flex; 
+    justify-content: center;  */
+}
+
+.foto-slider {
+  width: 80%;
+  overflow: hidden;
+  /*Oculto los elementos por fuera del Section*/
+}
+
+.foto-slider ul {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 600%;
+  /*Al ser 6 imagenes, le otorgo el 100% a cada una*/
+  -webkit-animation: slider 16s infinite alternate ease-in-out;
+          animation: slider 16s infinite alternate ease-in-out;
+  /* la prodiedad: Alternate, evita que salte de la ultima imagen a la primera, asi que vuelve hacia la anterior*/
+}
+
+.foto-slider li {
+  width: 100%;
+  list-style: none;
+}
+
+.foto-slider img {
+  width: 100%;
+  height: 55%;
+}
+
+/*Animacion del Slider*/
+@-webkit-keyframes slider {
+  /*La 1er imagen iria del 0 al 20% respecto al tiempo ingresado, serian 20*0.2 = 4seg transicion*/
+  0% {
+    margin-left: 0;
+  }
+  10% {
+    margin-left: 0;
+  }
+  /*Dejo un 5% del tiempo al cambiar la imagen, es decir, 1 seg de transicion*/
+  15% {
+    margin-left: -100%;
+  }
+  25% {
+    margin-left: -100%;
+  }
+  35% {
+    margin-left: -200%;
+  }
+  45% {
+    margin-left: -200%;
+  }
+  55% {
+    margin-left: -300%;
+  }
+  65% {
+    margin-left: -300%;
+  }
+  75% {
+    margin-left: -400%;
+  }
+  85% {
+    margin-left: -400%;
+  }
+  95% {
+    margin-left: -500%;
+  }
+  100% {
+    margin-left: -500%;
+  }
+}
+@keyframes slider {
+  /*La 1er imagen iria del 0 al 20% respecto al tiempo ingresado, serian 20*0.2 = 4seg transicion*/
+  0% {
+    margin-left: 0;
+  }
+  10% {
+    margin-left: 0;
+  }
+  /*Dejo un 5% del tiempo al cambiar la imagen, es decir, 1 seg de transicion*/
+  15% {
+    margin-left: -100%;
+  }
+  25% {
+    margin-left: -100%;
+  }
+  35% {
+    margin-left: -200%;
+  }
+  45% {
+    margin-left: -200%;
+  }
+  55% {
+    margin-left: -300%;
+  }
+  65% {
+    margin-left: -300%;
+  }
+  75% {
+    margin-left: -400%;
+  }
+  85% {
+    margin-left: -400%;
+  }
+  95% {
+    margin-left: -500%;
+  }
+  100% {
+    margin-left: -500%;
+  }
+}
+
+/* Box */
+#main-box {
+  width: auto;
+  height: auto;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  /*align-items: center;    */
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #323a41;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.box {
+  height: auto;
+  width: 260px;
+  background-color: #ffd693;
+  padding: 2px;
+  text-align: center;
+  /*Sombreado de cajas*/
+  -webkit-box-shadow: 0px 0px 5px 1px black;
+          box-shadow: 0px 0px 5px 1px black;
+}
+
+/*Footer*/
+#main-footer {
+  margin: 5px;
+  padding: 5px;
+  width: auto;
+  height: auto;
+  background-color: black;
+  color: white;
+  /*border: 2px solid red;*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/*
+.row>.col, .row>[class^="col-"]{
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    background-color: rgb(161, 228, 255);
+    border: 1px solid red;
+}
+*/
+.contenedor-footer {
+  padding: 5px;
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  justify-items: center;
+}
+
+.contenedor-footer h4 {
+  padding-bottom: 2px;
+  border-bottom: 2px solid white;
+  /*Subrayado*/
+}
+
+.contact-foo {
+  padding: 5px;
+  width: 260px;
+  height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: center;
+}
+
+.map-foo {
+  padding: 5px;
+  width: 250px;
+  height: 150px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.map iframe {
+  margin: 2px;
+  height: 30mm;
+  width: 50mm;
+}
+
+.redes-foo {
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.objects {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.derechos-foo {
+  padding: 2px;
+  text-align: center;
+  margin-top: 20px;
+}
+/*# sourceMappingURL=style.css.map */

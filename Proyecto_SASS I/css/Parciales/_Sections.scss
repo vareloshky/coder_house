@@ -1,0 +1,115 @@
+/*Inicio -->  Box */
+#main-box{ 
+    width: auto;
+    height: auto;
+    padding: 10px;
+    display: flex; 
+    flex-flow: row wrap;   
+    justify-content: space-around;  
+    /*align-items: center;    */        
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #323a41;
+    align-items: stretch;
+    .box {
+        height: auto;
+        width: 260px;
+        background-color: rgb(255, 214, 147);
+        padding: 2px;
+        text-align: center;            
+        /*Sombreado de cajas*/
+        box-shadow: 0px 0px 5px 1px black;    
+    }
+}
+
+/* Catalogo --> main-catalogo */
+
+#main-catalogo{
+    & .filtro{
+        background: #e0e0e0; 
+        padding: 5px;
+    }
+    
+    & .filtro ul{       
+        display: flex;
+        flex-direction: column; 
+        width: 130px;     
+        height: 150px;   
+        justify-content: space-evenly;
+        list-style: none; 
+    }
+    
+    & .catalogo{        
+        padding: 5px;   
+        row-gap: 10px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+    }
+    
+    & .catalogo > * {
+        box-shadow: 0px 0px 5px 2px black;
+    }
+    
+    & .banner{     
+        width: 100%;
+        height: 250px;
+    }
+    
+    & .fotos-catalogo{ 
+    width: 250px;
+    height: 200px;
+    }
+}
+
+
+/* Contacto --> main-from */
+.main-form{    
+    display: flex;
+    flex-direction: column;
+    width: auto ;
+    margin: auto;
+    background-color: #3f95f7;
+    padding: 5px;   
+    color: white;
+    & .contacto-form{   
+        text-align: center;
+    }
+    & .controls{
+        width: 98%;
+        background: #91b4d6;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-radius: 4px;   
+    }
+    
+    & .consulta{
+        display: flex;
+        flex-direction: row;
+        padding: 10px;
+        justify-content: space-around;
+    }
+    
+    & .mensaje{
+        width: 98%;
+        height: 120px;
+    }
+    
+    
+    & .enviar{
+        width: 100%;
+        background: #ffffff;
+        padding: 10px;
+        border-radius: 4px;
+    }
+}
+
+
+/* Nosotros --> nuestra-casa */
+.nuestra-casa{    
+    grid-area: section;    
+    background-color:rgb(255, 214, 147); 
+    padding: 10px;   
+}
+
+
+

@@ -1,0 +1,79 @@
+/*Footer*/
+#main-footer{
+    margin: 5px;   
+    padding: 5px;
+    width: auto;
+    height: auto;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255); 
+    /*border: 2px solid red;*/
+    display: flex; 
+    .contenedor-footer{      
+        padding: 5px;
+        width: 100%;
+        height: auto;    
+        display: flex;    
+        flex-flow: row wrap;  
+        justify-content: space-around; 
+        justify-items: center;
+    }
+    
+    .contenedor-footer h4{    
+        padding-bottom: 2px;
+        border-bottom: 2px solid white; /*Subrayado*/
+    }
+    
+    .contact-foo{    
+        padding: 5px;
+        width: 260px;
+        height: 150px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;   
+        text-align: center;    
+    }
+    
+    .map-foo{      
+        padding: 5px; 
+        width: 250px;
+        height: 150px;
+        text-align: center;
+        display: flex;
+        flex-direction: column; 
+        justify-content: space-around;       
+    }
+    
+    .map iframe{
+        margin: 2px;
+        height: 30mm;
+        width: 50mm;
+    }
+    
+    .redes-foo{ 
+        width: 150px;
+        height: 150px;
+        text-align: center;
+        display: flex; 
+        flex-flow: column nowrap; 
+        justify-content: space-around;  
+        
+    }
+    
+    .objects{               
+        width: 100%;    
+        display:flex;   
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        align-items: center;   
+    }
+    
+    .derechos-foo{     
+        padding: 2px;   
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+}
+
+
+

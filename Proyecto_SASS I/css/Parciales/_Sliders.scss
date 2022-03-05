@@ -1,0 +1,93 @@
+/*SLIDER*/
+#slider{
+    & .foto-slider{    
+        width: 80%;    
+        overflow: hidden; /*Oculto los elementos por fuera del Section*/    
+    }
+    
+    & .foto-slider ul{    
+        padding: 0;  
+        display: flex;   
+        width: 600%;/*Al ser 6 imagenes, le otorgo el 100% a cada una*/   
+        animation: slider 16s infinite alternate ease-in-out; /* la prodiedad: Alternate, evita que salte de la ultima imagen a la primera, asi que vuelve hacia la anterior*/   
+    }
+    
+    & .foto-slider li{
+        width: 100%;    
+        list-style: none;    
+    }
+    
+    & .foto-slider img{
+        width: 100%;
+        height: 55%;    
+    }    
+    
+    @keyframes slider {
+        /*La 1er imagen iria del 0 al 20% respecto al tiempo ingresado, serian 20*0.2 = 4seg transicion*/
+        0% {margin-left: 0;}
+        10% {margin-left: 0;}
+    
+        /*Dejo un 5% del tiempo al cambiar la imagen, es decir, 1 seg de transicion*/
+        15% {margin-left: -100%;}
+        25% {margin-left: -100%;}
+    
+        35% {margin-left: -200%;}
+        45% {margin-left: -200%;}
+    
+        55% {margin-left: -300%;}
+        65% {margin-left: -300%;}
+    
+        75% {margin-left: -400%;}
+        85% {margin-left: -400%;}
+    
+        95% {margin-left: -500%;}
+        100% {margin-left: -500%;}
+    }
+
+}
+
+/* Nosotros --> Slider-Nosotors */
+
+#slider{
+    & .slider-nosotros{      
+        width: 100%;
+       /* height: 400px; */
+        overflow: hidden; /*Oculto los elementos por fuera del Section*/    
+        
+    }
+    
+    & .slider-nosotros ul{    
+        padding: 0;  
+        display: flex;   
+        width: 400%;/*Al ser 2 imagenes, le otorgo el 100% a cada una*/   
+        animation: slider 16s infinite alternate ease-in-out;   
+    }
+    
+    & .slider-nosotros li{
+        width: 100%;    
+        list-style: none;
+    }
+    
+    & .slider-nosotros img{
+        width: 100%;
+        /*height: 400px;*/
+    }
+    
+    /*Animacion del Slider*/
+    @keyframes slider {
+        /*La 1er imagen iria del 0 al 20% respecto al tiempo ingresado, serian 20*0.2 = 4seg transicion*/
+        0% {margin-left: 0;}
+        20% {margin-left: 0;}
+    
+        /*Dejo un 5% del tiempo al cambiar la imagen, es decir, 1 seg de transicion*/
+        25% {margin-left: -100%;}
+        45% {margin-left: -100%;}
+    
+        50% {margin-left: -200%;}
+        70% {margin-left: -200%;}
+    
+        75% {margin-left: -300%;}
+        100% {margin-left: -300%;}
+    }
+}
+
