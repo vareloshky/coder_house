@@ -1,0 +1,201 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/*GRID*/
+#grid-container{
+    background-color: rgb(34, 34, 34);
+}
+
+
+/*Header*/
+#main-header{       
+    background-color: rgb(0, 0, 0); 
+    position: sticky; /*Mantengo el Header visible al bajar*/
+/* top: 1px;   
+    z-index: 1;     
+    padding: 5px;*/
+    width: auto;
+}
+
+/*IMG -> En este caso es hijo de Div*/
+.logoempresa{     
+    width: 240px;
+    height: 100px;       
+}
+
+.navslogan{     
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+    color: whitesmoke; 
+    padding-top: 25px;   
+    padding-bottom: 25px;
+    width: auto;  
+    text-align: center; 
+}
+
+.navbarlist{       
+    display: flex;
+    justify-content: space-around;       
+    width: 90%; 
+    list-style-type: none;       
+}
+
+/*Al pasar el mouse que se pinte*/
+.navbarlist li a:hover{
+    background-color: orange;       
+}
+
+.navbarlist a{    
+    text-decoration: none;
+    text-align: center; /*Centro el texto*/    
+    font-size: 20px;
+    color: white;
+    padding: 2px;
+    display: block; /*Ocupa todo el Ancho de la barra NAV para evitar que se superponga el sombreado del item*/
+    border-radius: 5px;
+    transition: 1.5s;  
+}
+
+.menubtn{
+    font-size: 30px;/*Le doy tamaño al icono menu*/
+    background-color: white;
+    cursor: pointer;/*Coloco un dedo al posicionarme sobre el boton*/
+    display: none;/*Oculto el menu boton*/
+}
+
+#check{
+    display: none;
+}
+
+/*#main-catalogo{      
+    padding: 5px;
+    grid-area: catalogo;
+    display: grid;
+    grid-template-columns: 150px repeat(4 , 1fr);
+    grid-template-rows: repeat(4 , 1fr);
+    column-gap: 5px;
+    
+}*/
+
+
+.filtro{
+    background: #e0e0e0; 
+    padding: 5px;
+}
+
+.filtro ul{       
+    display: flex;
+    flex-direction: column; 
+    width: 130px;     
+    height: 150px;   
+    justify-content: space-evenly;
+    list-style: none; 
+}
+
+.catalogo{        
+    padding: 5px;   
+    row-gap: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+.catalogo > * {
+    box-shadow: 0px 0px 5px 2px black;
+}
+
+#main-catalogo .banner{     
+    width: 100%;
+    height: 250px;
+}
+
+#main-catalogo .fotos-catalogo{ 
+width: 250px;
+height: 200px;
+}
+
+/*Footer*/
+#main-footer{
+    margin: 5px;   
+    padding: 5px;
+    width: auto;
+    height: auto;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255); 
+    /*border: 2px solid red;*/
+    display: flex;   
+    
+}
+
+
+.row>.col, .row>[class^="col-"]{
+    padding-top: .75rem;
+    padding-bottom: .75rem;     
+    border: 1px solid red;
+}
+
+.contenedor-footer{      
+    padding: 5px;
+    width: 100%;
+    height: auto;    
+    display: flex;    
+    flex-flow: row wrap;  
+    justify-content: space-around; 
+    justify-items: center;
+}
+
+.contenedor-footer h4{    
+    padding-bottom: 2px;
+    border-bottom: 2px solid white; /*Subrayado*/
+}
+
+.contact-foo{    
+    padding: 5px;
+    width: 260px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;   
+    text-align: center;    
+}
+
+.map-foo{      
+    padding: 5px; 
+    width: 250px;
+    height: 150px;
+    text-align: center;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-around;       
+}
+
+.map iframe{
+    margin: 2px;
+    height: 30mm;
+    width: 50mm;
+}
+
+.redes-foo{ 
+    width: 150px;
+    height: 150px;
+    text-align: center;    
+    display: flex; 
+    flex-flow: column nowrap; 
+    justify-content: space-around;   
+}
+
+.objects{               
+    width: 100%;    
+    display:flex;   
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;   
+}
+
+.derechos-foo{     
+    padding: 2px;   
+    text-align: center;
+    margin-top: 20px;
+}
